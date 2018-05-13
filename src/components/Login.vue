@@ -54,6 +54,7 @@
 //                that.$router.addRoutes(that.$store.getters.addRouters);
 //                that.$router.options.routes = that.$store.getters.routers;
                 that.$router.push({path: '/'});
+                // that.$router.go({path: '/'})
               } else {
                 that.$message.error({showClose: true, message: result.errmsg || '登录失败', duration: 2000});
               }

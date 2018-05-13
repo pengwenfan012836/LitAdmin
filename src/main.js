@@ -9,7 +9,15 @@ import '@/assets/iconfont.css'
 import '@/assets/styles/main.scss'
 
 Vue.config.productionTip = false
+/**
+ * 安装 Vue.js 插件,这里是全局安装elementUI
+ * 这样做之后整个项目任何地方都可以用elementUI的组件了
+ * router其实也在背后被默认Vue.use(router)了，
+ * 当然你也可以在下面显示写出来
+ */
 Vue.use(ElementUI)
+//像这样
+Vue.use(router)
 
 /* eslint-disable no-new */
 new Vue({
