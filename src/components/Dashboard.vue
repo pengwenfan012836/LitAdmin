@@ -101,6 +101,7 @@
   import echarts from 'echarts'
 
   export default {
+    // name: 'dashboard',
     data() {
       return {
         currentDate: new Date(),

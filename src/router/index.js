@@ -11,6 +11,7 @@ import UserChangePwd from '@/components/user/changepwd'
 import UserProfile from '@/components/user/profile'
 import NewUserList from '@/components/newuser/newuserlist'
 import JobLists from '@/components/newuser/joblists'
+import TodoList from '@/components/todo/todolist'
 
 // 懒加载方式，当路由被访问的时候才加载对应组件
 const Login = resolve => require(['@/components/Login'], resolve)
@@ -85,7 +86,16 @@ let router = new Router({
           name: '备份任务'
         }
       ]
-    }
+    }, {
+      path: '/',
+      component: Home,
+      name: 'todolist',
+      menuShow: true,
+      iconCls: 'iconfont icon-books',
+      children: [
+       {path: '/todo/todolist', component: TodoList, name: 'todolist', menuShow: true}
+      ]
+    },
     
   ]
 })

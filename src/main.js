@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
+import axios from 'axios'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/iconfont.css'
 import '@/assets/styles/main.scss'
@@ -18,7 +19,7 @@ Vue.config.productionTip = false
 Vue.use(ElementUI)
 //像这样
 Vue.use(router)
-
+Vue.prototype.$http = axios;
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

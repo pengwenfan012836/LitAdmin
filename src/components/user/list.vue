@@ -44,6 +44,7 @@
   import API from '../../api/api_user';
 
   export default {
+    name: 'aaa',
     data() {
       return {
         filters: {

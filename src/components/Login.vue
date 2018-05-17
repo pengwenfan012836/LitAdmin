@@ -19,6 +19,7 @@
   import API from '../api/api_user';
 
   export default {
+    name: 'login',
     data() {
       return {
         loading: false,
@@ -46,6 +47,9 @@
           if (valid) {
             this.loading = true;
             let loginParams = {username: this.account.username, pwd: this.account.pwd};
+            this.$http.get('/static/test.json').then(res => {
+              console.log(res);
+            })
             API.login(loginParams).then(function (result) {
               that.loading = false;
               if (result && result.id) {
